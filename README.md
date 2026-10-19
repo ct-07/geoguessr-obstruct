@@ -43,7 +43,7 @@
 
 ## NOT A CHEAT
 
-ct-07 only makes the game harder. It never reads locations or touches guesses or scoring. Please keep it out of ranked modes to be safe.
+Obstruct only makes the game harder. It never reads locations or touches guesses or scoring. Please keep it out of ranked modes to be safe.
 
 ---
 
