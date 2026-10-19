@@ -1,6 +1,6 @@
 # ct-07 Obstruct
 
-**Vision handicaps for GeoGuessr, by Callum.**
+**Vision handicaps for GeoGuessr**
 
 58 toggleable effects to make GeoGuessr harder: flashlights, blizzards, pop-up ads, drunk mode, thermal cameras, and more. Stack them, or pick one of 15 ready-made loadouts. Works in singleplayer and party games, and only on your own screen.
 
