@@ -1,0 +1,76 @@
+{
+  "manifest_version": 3,
+  "name": "ct-07 Obstruct — GeoGuessr handicaps",
+  "short_name": "ct-07",
+  "version": "1.0.0",
+  "description": "Callum Telfer's ct-07: 58 toggleable vision handicaps for GeoGuessr. Flashlights, blizzards, pop-up ads, drunk mode and more.",
+  "author": "Callum Telfer",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "ct-07 Obstruct",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.geoguessr.com/*", "https://geoguessr.com/*"],
+      "js": [
+        "src/registry.js",
+        "src/store.js",
+        "src/engine.js",
+        "src/effects/lens.js",
+        "src/effects/vision.js",
+        "src/effects/weather.js",
+        "src/effects/motion.js",
+        "src/effects/hud.js",
+        "src/effects/chaos.js",
+        "src/ui.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/ui.css"],
+      "matches": ["https://www.geoguessr.com/*", "https://geoguessr.com/*"]
+    }
+  ],
+  "commands": {
+    "toggle-master": {
+      "suggested_key": { "default": "Alt+Shift+X" },
+      "description": "Turn every ct-07 effect on/off"
+    },
+    "toggle-panel": {
+      "suggested_key": { "default": "Alt+Shift+O" },
+      "description": "Show/hide the in-game ct-07 panel"
+    },
+    "randomize": {
+      "suggested_key": { "default": "Alt+Shift+R" },
+      "description": "Roll a random loadout"
+    },
+    "clear-all": {
+      "suggested_key": { "default": "Alt+Shift+C" },
+      "description": "Switch off all effects"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ct07-obstruct@callumtelfer",
+      "strict_min_version": "121.0"
+    }
+  }
+}

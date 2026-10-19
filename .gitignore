@@ -1,0 +1,23 @@
+# Local Claude Code config (contains machine-specific paths)
+.claude/
+
+# Packaged builds for the Chrome Web Store / Firefox Add-ons
+*.zip
+*.crx
+*.pem
+*.xpi
+web-ext-artifacts/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-only notes
+DUMMYREADME.md
+dev/
